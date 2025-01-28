@@ -1,13 +1,12 @@
 let listasAmigosDigitados = [];
-let qtdItemListas = listasAmigosDigitados.length();
 
 function adicionarAmigo() {
   let nome = document.querySelector('input').value;
-  if (nome == '') {
+  if (nome === '') {
     alert('Por favor , insira um nome válido.');
-  } else {
-    listasAmigosDigitados.push(nome);
   }
+
+  listasAmigosDigitados.push(nome);
   atualizarListaAmigos();
   limparCaixaTexto();
 }
@@ -29,8 +28,6 @@ function sortearAmigo() {
     mensagem.innerHTML = `O amigo secreto é: ${listasAmigosDigitados[numero]}`;
   }
 }
-
-sortearAmigo();
 
 function limparCaixaTexto() {
   nome = document.querySelector('input');
